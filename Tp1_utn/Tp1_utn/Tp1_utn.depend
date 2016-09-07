@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1473219395 source:/home/veronica/Tp1_utn/Tp1_utn/funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1473219430 /home/veronica/Tp1_utn/Tp1_utn/funciones.h
+
+1473219305 source:/home/veronica/Tp1_utn/Tp1_utn/main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
