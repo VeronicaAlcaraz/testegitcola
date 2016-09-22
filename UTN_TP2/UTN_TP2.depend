@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1474485321 source:/home/veronica/Tarea_clase6/UTN_TP2/Funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"Funciones.h"
+	<string.h>
+
+1474485430 /home/veronica/Tarea_clase6/UTN_TP2/Funciones.h
+
+1474499532 source:/home/veronica/Tarea_clase6/UTN_TP2/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Funciones.h"
+	<string.h>
+
+1474485321 source:/home/veronica/TP2_Alcaraz/UTN_TP2/Funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"Funciones.h"
+	<string.h>
+
+1474485430 /home/veronica/TP2_Alcaraz/UTN_TP2/Funciones.h
+
+1474499532 source:/home/veronica/TP2_Alcaraz/UTN_TP2/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Funciones.h"
+	<string.h>
+
