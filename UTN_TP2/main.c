@@ -13,7 +13,6 @@ int main()
 
 
     iniciarArray(item);
-
     while(seguir=='s')
     {
         printf("1- Agregar persona\n");
