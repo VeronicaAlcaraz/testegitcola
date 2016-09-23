@@ -60,6 +60,55 @@ void ordenarPersonas(EPersona lista[])
 }
 
 
-void mostrarGrafico()
+void mostrarGrafico(EPersona lista[])
 {
+    int hasta18,
+        de19a35,
+        mayorDe35,
+        mayor,
+        flag=0,
+        i;
+
+        hasta18 = de19a35 = mayorDe35 = 0;
+                for(i=0; i<20; i++)
+                {
+                    if(lista[i].estado == 1 && lista[i].edad < 19)
+                        hasta18++;
+                    if(lista[i].estado == 1 && lista[i].edad > 18 && lista[i].edad < 36)
+                        de19a35++;
+                    if(lista[i].estado == 1 && lista[i].edad > 35)
+                        mayorDe35++;
+                }
+                if(hasta18 >= de19a35 && hasta18 >= mayorDe35)
+                    mayor = hasta18;
+                if(de19a35 >= hasta18 && de19a35 >= mayorDe35)
+                    mayor = de19a35;
+                if(mayorDe35 >= de19a35 && mayorDe35 >= de19a35)
+                    mayor = mayorDe35;
+
+                for(i=mayor; i>0; i--)
+                {
+
+                    if(i<= hasta18)
+                    {
+                        printf("*");
+                    }
+                    if(i<= de19a35)
+                    {
+                        flag=1;
+                        printf("\t*");
+                    }
+                    if(i<= mayorDe35)
+                    {
+                        if(flag==0)
+                            printf("\t\t*");
+                        if(flag==1)
+                            printf("\t*");
+                    }
+
+                    printf("\n");
+                }
+                printf("-----------------");
+                printf("\n<18\t19-35\t>35\n");
+                printf("\n   %d\t%d\t%d", hasta18, de19a35, mayorDe35);
 }

@@ -7,17 +7,9 @@ int main()
 {
     char seguir='s';
     int opcion=0,
-        i,
-        j,
         pos,
-        dni,
-        flag,
-        hasta18,
-        de19a35,
-        mayorDe35,
-        mayor;
-    EPersona item[20],
-             aux;
+        dni;
+    EPersona item[20];
 
 
     iniciarArray(item);
@@ -32,6 +24,7 @@ int main()
 
         scanf("%d",&opcion);
 
+
         switch(opcion)
         {
             case 1:
@@ -45,6 +38,7 @@ int main()
 
                     printf("Ingrese edad: ");
                     scanf("%d", &item[pos].edad);
+
 
                     printf("Ingrese dni: ");
                     scanf("%d", &item[pos].dni);
@@ -66,75 +60,23 @@ int main()
                    printf("Se ha borrado a la persona con exito!!\n\n");
                 }
                 else
-                    printf("La persona no existe\n");
+                    printf("La persona todavía no fue dada de alta.\n");
                     system("pause");
 
                 break;
 
             case 3:
                 system("cls");
-                for(i=0; i<20; i++)
-                {
-                    for(j=i+1; j<20; j++)
-                    {
-                        if(strcmp(item[i].nombre, item[j].nombre)>0)
-                        {
-                            aux = item[i];
-                            item[i] = item[j];
-                            item[j] = aux;
-                        }
-                    }
-                }
-                system("cls");
-                printf("Nombre    Edad   DNI\n");
-                for(i=0; i<20; i++)
-                {
-                    if(item[i].estado == 1)
-                        printf("%5s  %3d %10d\n", item[i].nombre, item[i].edad, item[i].dni);
-                }
+                ordenarPersonas(item);
                 system("pause");
                 break;
 
             case 4:
-                hasta18 = de19a35 = mayorDe35 = 0;
-                for(i=0; i<20; i++)
-                {
-                    if(item[i].estado == 1 && item[i].edad < 19)
-                        hasta18++;
-                    if(item[i].estado == 1 && item[i].edad > 18 && item[i].edad < 36)
-                        de19a35++;
-                    if(item[i].estado == 1 && item[i].edad > 35)
-                        mayorDe35++;
-                }
-                if(hasta18 >= de19a35 && hasta18 >= mayorDe35)
-                    mayor = hasta18;
-                if(de19a35 >= hasta18 && de19a35 >= mayorDe35)
-                    mayor = de19a35;
-                if(mayorDe35 >= de19a35 && mayorDe35 >= de19a35)
-                    mayor = mayorDe35;
-                for(i=mayor; i>0; i--)
-                {
-
-                    if(i<= hasta18){
-                        printf("*");
-                    }
-                    if(i<= de19a35){
-                        flag=1;
-                        printf("\t*");
-                    }
-                    if(i<= mayorDe35){
-                        if(flag==0)
-                            printf("\t\t*");
-                        if(flag==1)
-                            printf("\t*");
-
-                    }
-
-                    printf("\n");
-                }
-                printf("--------------------");
-                printf("\n<18\t19-35\t>35\n");
+                printf("\n");
+                system("cls");
+               mostrarGrafico(item);
                 break;
+
             case 5:
                 seguir = 'n';
                 break;

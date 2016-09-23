@@ -10,9 +10,10 @@ typedef struct {
 
 }EPersona;
 
+int validarOpcion();
  /**
- * Le da un valor inicial a cada array.
- * @param iniciar el array se pasa como parametro.
+ * Da un valor inicial a cada array.
+ * @param iniciar se pasa como parametro.
  * @return un valor 0 a cada array.
  */
 void iniciarArray(EPersona iniciar[]);
@@ -25,6 +26,7 @@ void iniciarArray(EPersona iniciar[]);
  */
 int obtenerEspacioLibre(EPersona lista[]);
 
+
 /**
  * Obtiene el indice que coincide con el dni pasado por parametro.
  * @param lista el array se pasa como parametro.
@@ -34,19 +36,17 @@ int obtenerEspacioLibre(EPersona lista[]);
 int buscarPorDni(EPersona lista[], int dni);
 
 /**
- * Obtiene el indice que
+ * Obtiene el indice con los nombres dados de alta.
  * @param lista el array se pasa como parametro.
- * @param edad la edad a ser buscado en el array.
- * @return grafico
+ * @return lista ordenada alfabeticamente.
  */
-void ordenarPersonas();
+void ordenarPersonas(EPersona lista[]);
 
 /**
- * Obtiene el indice que
+ * Obtiene el indice con las edades de las personas dadas de alta.
  * @param lista el array se pasa como parametro.
- * @param edad la edad a ser buscado en el array.
- * @return grafico
+ * @return grafico de barras.
  */
-void mostrarGrafico();
+void mostrarGrafico(EPersona lista[]);
 #endif // FUNCIONES_H_INCLUDED
 
